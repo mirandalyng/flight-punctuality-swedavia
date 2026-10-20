@@ -7,8 +7,7 @@ services:
       - "3000:3000"
     env_file:
       - .env
-    ##add
-    #image: azure_image_url
+    image: ${ACR_LOGIN_SERVER}/dwh_pipeline:latest
 
   dashboard:
     build:
@@ -18,5 +17,4 @@ services:
       - "8501:8501"
     env_file:
       - .env
-    ##add:
-    #image: azure_image_url
+    image: ${ACR_LOGIN_SERVER}/dashboard:latest
