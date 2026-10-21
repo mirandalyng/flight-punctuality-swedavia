@@ -1,5 +1,6 @@
 services:
   dwh_pipeline:
+    platform: linux/amd64
     build:
       context: .
       dockerfile: dockerfile.dwh
@@ -10,6 +11,7 @@ services:
     image: ${ACR_LOGIN_SERVER}/dwh_pipeline:latest
 
   dashboard:
+    platform: linux/amd64
     build:
       context: .
       dockerfile: dockerfile.dashboard
